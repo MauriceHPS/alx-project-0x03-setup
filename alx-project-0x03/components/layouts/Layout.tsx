@@ -1,8 +1,23 @@
-const Layout = () => {
+import { ReactNode } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
-      <h1>Welcome to Splash App</h1>
-    </div>
+    <>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="grow bg-linear-to-r from-gray-300 to-gray-100">
+          {children}
+        </main>
+
+        <Footer />
+      </div>
+    </>
   );
 };
 
