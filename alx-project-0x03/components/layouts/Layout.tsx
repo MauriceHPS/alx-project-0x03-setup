@@ -9,9 +9,15 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="grow bg-linear-to-r from-gray-300 to-gray-100">
+          <p>Body Content is here!</p>
+          {children}
+        </main>
+
+        <Footer />
+      </div>
     </>
   );
 };
