@@ -1,10 +1,4 @@
-import { ReactNode } from "react";
-
-interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = () => {
   return (
     <div>
       <h1>Welcome to Splash App</h1>
